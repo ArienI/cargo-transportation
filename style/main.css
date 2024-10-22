@@ -726,31 +726,6 @@ a {
 .banner-slide__list > li {
   margin-bottom: 6px;
 }
-.banner-slide__contact {
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 10px 20px;
-
-  font-size: 24px;
-  color: var(--white-color);
-  text-decoration: none;
-
-  background-color: var(--orange-color);
-  border-radius: 8px;
-}
-.banner-slide__socials {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-
-  --icon-size: 60px;
-}
-.banner-slide__socials > *:not(:first-child) {
-  margin-left: 10px;
-}
 @media (min-width: 768px) {
   .banner-slide {
     min-height: 600px;
@@ -768,18 +743,6 @@ a {
     margin-bottom: 0;
 
     font-size: 24px;
-    text-align: left;
-  }
-}
-@media (min-width: 992px) {
-  .banner-slide__text {
-    text-align: left;
-  }
-  .banner-slide__contact {
-    transition: background-color 0.2s ease-in-out;
-  }
-  .banner-slide__contact:hover {
-    background-color: var(--orange-70-color);
   }
 }
 @media (min-width: 1200px) {
@@ -796,11 +759,6 @@ a {
     font-size: 64px;
   }
   .banner-slide__list {
-    font-size: 28px;
-  }
-  .banner-slide__contact {
-    margin-bottom: 40px;
-
     font-size: 28px;
   }
 }
@@ -917,21 +875,59 @@ a {
   font-size: 16px;
 }
 
-.timetable {
+.contacts {
   padding: 15px 0;
-
-  color: var(--white-color);
 
   background-color: var(--gray-color);
   background-image: url("../img/2.jpg");
   border-bottom-right-radius: 50px;
 }
-.timetable__text {
-  margin: 0;
+.contacts__phone {
+  display: inline-block;
+  padding: 10px 20px;
 
-  font-size: 18px;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 28px;
+  color: var(--white-color);
+  text-decoration: none;
+
+  background-color: var(--orange-color);
+  border-radius: 8px;
+}
+.contacts__socials {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  --icon-size: 60px;
+}
+.contacts__socials > *:not(:first-child) {
+  margin-left: 10px;
+}
+@media (min-width: 992px) {
+  .contacts__contact {
+    transition: background-color 0.2s ease-in-out;
+  }
+  .contacts__contact:hover {
+    background-color: var(--orange-70-color);
+  }
+  .contacts__phone {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts__phone {
+    font-size: 34px;
+  }
+}
+@media (min-width: 1600px) {
+  .contacts__contact {
+    margin-bottom: 40px;
+
+    font-size: 28px;
+  }
 }
 
 .excursion-title {
@@ -1008,77 +1004,109 @@ a {
   }
 }
 
-.transfer-title {
-  text-align: center;
-}
-
 .transfer-banner {
   position: relative;
+
+  align-items: center;
+  min-height: 500px;
+  padding: 60px 0;
+
+  text-align: center;
+  color: var(--white-color);
+
+  background-color: var(--gray-color);
 }
 .transfer-banner__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   width: 100%;
-  height: 250px;
+  height: 100%;
 
   background-image: url("../img/airport/airports.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+}
+.transfer-banner__title {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 16px;
+
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: -2px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 @media (min-width: 768px) {
-  .transfer-banner__img {
-    height: 350px;
+  .transfer-banner {
+    min-height: 600px;
   }
-}
-@media (min-width: 992px) {
-  .transfer-banner__img {
-    height: 450px;
-  }
-}
-@media (min-width: 1200px) {
-  .transfer-banner__img {
-    height: 600px;
+  .transfer-banner__title {
+    margin-bottom: 40px;
+
+    font-size: 48px;
   }
 }
 @media (min-width: 1600px) {
-  .transfer-banner__img {
-    height: 800px;
+  .transfer-banner {
+    min-height: 750px;
+  }
+  .transfer-banner__title {
+    font-size: 64px;
+  }
+}
+@media (min-width: 1920px) {
+  .transfer-banner {
+    min-height: 850px;
   }
 }
 
-.transfer-list {
-  list-style: none;
-  text-align: center;
-}
 .transfer-list__item {
   position: relative;
+  z-index: 2;
 
   padding-bottom: 5px;
 
+  list-style: none;
   font-size: 20px;
-}
-.transfer-list__item::before {
-  content: "◈";
-
-  margin-right: 5px;
-
-  color: var(--orange-color);
+  text-shadow: -2px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 @media (min-width: 992px) {
   .transfer-list__item {
-    font-size: 22px;
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .transfer-list__item {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .transfer-list__item {
+    font-size: 40px;
   }
 }
 
-.transfer-text {
+.transfer__description {
   font-size: 18px;
   line-height: 1.6;
   text-indent: 30px;
 }
 @media (min-width: 992px) {
-  .transfer-text {
+  .transfer__description {
     font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .transfer__description {
+    padding-bottom: 100px;
+
+    font-size: 24px;
   }
 }
 
