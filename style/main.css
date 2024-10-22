@@ -886,7 +886,7 @@ a {
   display: inline-block;
   padding: 10px 20px;
 
-  font-size: 28px;
+  font-size: 18px;
   color: var(--white-color);
   text-decoration: none;
 
@@ -906,11 +906,16 @@ a {
 .contacts__socials > *:not(:first-child) {
   margin-left: 10px;
 }
+@media (min-width: 768px) {
+  .contacts__phone {
+    font-size: 26px;
+  }
+}
 @media (min-width: 992px) {
-  .contacts__contact {
+  .contacts__contacts {
     transition: background-color 0.2s ease-in-out;
   }
-  .contacts__contact:hover {
+  .contacts__contacts:hover {
     background-color: var(--orange-70-color);
   }
   .contacts__phone {
@@ -923,10 +928,8 @@ a {
   }
 }
 @media (min-width: 1600px) {
-  .contacts__contact {
-    margin-bottom: 40px;
-
-    font-size: 28px;
+  .contacts__phone {
+    font-size: 36px;
   }
 }
 
