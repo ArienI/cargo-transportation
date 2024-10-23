@@ -933,77 +933,109 @@ a {
   }
 }
 
-.excursion-title {
-  text-align: center;
-}
-
 .excursion-banner {
   position: relative;
+
+  align-items: center;
+  min-height: 500px;
+  padding: 60px 0;
+
+  text-align: center;
+  color: var(--white-color);
+
+  background-color: var(--gray-color);
 }
 .excursion-banner__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   width: 100%;
-  height: 250px;
+  height: 100%;
 
   background-image: url("../img/excursions/excursion.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+.excursion-banner__title {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 16px;
+
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: -2px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 @media (min-width: 768px) {
-  .excursion-banner__img {
-    height: 350px;
+  .excursion-banner {
+    min-height: 600px;
   }
-}
-@media (min-width: 992px) {
-  .excursion-banner__img {
-    height: 450px;
-  }
-}
-@media (min-width: 1200px) {
-  .excursion-banner__img {
-    height: 600px;
+  .excursion-banner__title {
+    margin-bottom: 40px;
+
+    font-size: 48px;
   }
 }
 @media (min-width: 1600px) {
-  .excursion-banner__img {
-    height: 800px;
+  .excursion-banner {
+    min-height: 750px;
+  }
+  .excursion-banner__title {
+    font-size: 64px;
+  }
+}
+@media (min-width: 1920px) {
+  .excursion-banner {
+    min-height: 850px;
   }
 }
 
-.excursion-list {
-  list-style: none;
-  text-align: center;
-}
 .excursion-list__item {
   position: relative;
+  z-index: 2;
 
   padding-bottom: 5px;
 
+  list-style: none;
   font-size: 20px;
-}
-.excursion-list__item::before {
-  content: "◈";
-
-  margin-right: 5px;
-
-  color: var(--orange-color);
+  text-shadow: -2px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 @media (min-width: 992px) {
   .excursion-list__item {
-    font-size: 22px;
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .excursion-list__item {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .excursion-list__item {
+    font-size: 40px;
   }
 }
 
-.excursion-text {
+.excursion__description {
   font-size: 18px;
   line-height: 1.6;
   text-indent: 30px;
 }
 @media (min-width: 992px) {
-  .excursion-text {
+  .excursion__description {
     font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .excursion__description {
+    padding-bottom: 100px;
+
+    font-size: 24px;
   }
 }
 
@@ -1032,8 +1064,8 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-filter: brightness(0.4);
-          filter: brightness(0.4);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
 }
 .transfer-banner__title {
   position: relative;
@@ -1113,76 +1145,108 @@ a {
   }
 }
 
-.prevoz-title {
-  text-align: center;
-}
-
-.prevoz-list {
-  list-style: none;
-  text-align: center;
-}
-.prevoz-list__item {
-  position: relative;
-
-  padding-bottom: 5px;
-
-  font-size: 20px;
-}
-.prevoz-list__item::before {
-  content: "◈";
-
-  margin-right: 5px;
-
-  color: var(--orange-color);
-}
-@media (min-width: 992px) {
-  .prevoz-list__item {
-    font-size: 22px;
-  }
-}
-
-.prevoz-text {
-  font-size: 18px;
-  line-height: 1.6;
-  text-indent: 30px;
-}
-@media (min-width: 992px) {
-  .prevoz-text {
-    font-size: 22px;
-  }
-}
-
 .prevoz-banner {
   position: relative;
+
+  align-items: center;
+  min-height: 500px;
+  padding: 60px 0;
+
+  text-align: center;
+  color: var(--white-color);
+
+  background-color: var(--gray-color);
 }
 .prevoz-banner__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   width: 100%;
-  height: 250px;
+  height: 100%;
 
   background-image: url("../img/prevoz/germany.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-filter: brightness(0.6);
-          filter: brightness(0.6);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+.prevoz-banner__title {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 16px;
+
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: -2px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 @media (min-width: 768px) {
-  .prevoz-banner__img {
-    height: 350px;
+  .prevoz-banner {
+    min-height: 600px;
   }
-}
-@media (min-width: 992px) {
-  .prevoz-banner__img {
-    height: 450px;
-  }
-}
-@media (min-width: 1200px) {
-  .prevoz-banner__img {
-    height: 600px;
+  .prevoz-banner__title {
+    margin-bottom: 40px;
+
+    font-size: 48px;
   }
 }
 @media (min-width: 1600px) {
-  .prevoz-banner__img {
-    height: 800px;
+  .prevoz-banner {
+    min-height: 750px;
+  }
+  .prevoz-banner__title {
+    font-size: 64px;
+  }
+}
+@media (min-width: 1920px) {
+  .prevoz-banner {
+    min-height: 850px;
+  }
+}
+
+.prevoz-list__item {
+  position: relative;
+  z-index: 2;
+
+  padding-bottom: 5px;
+
+  list-style: none;
+  font-size: 20px;
+  text-shadow: -2px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
+@media (min-width: 992px) {
+  .prevoz-list__item {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .prevoz-list__item {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .prevoz-list__item {
+    font-size: 40px;
+  }
+}
+
+.prevoz__description {
+  font-size: 18px;
+  line-height: 1.6;
+  text-indent: 30px;
+}
+@media (min-width: 992px) {
+  .prevoz__description {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .prevoz__description {
+    padding-bottom: 100px;
+
+    font-size: 24px;
   }
 }
