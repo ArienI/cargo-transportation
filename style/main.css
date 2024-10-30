@@ -915,6 +915,7 @@ a {
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-right: 10px;
 
   list-style-type: none;
 
@@ -926,6 +927,9 @@ a {
 @media (min-width: 540px) {
   .contacts__phone {
     font-size: 20px;
+  }
+  .contacts__socials {
+    padding-right: 0;
   }
 }
 @media (min-width: 768px) {
